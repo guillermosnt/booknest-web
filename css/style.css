@@ -1,0 +1,32 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: bisque;
+}
+
+.cabecera h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5vh;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu h3 {
+    margin: 25px;
+}
+
+.menu h3:hover{
+    cursor: pointer;
+}
