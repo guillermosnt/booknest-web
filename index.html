@@ -1,30 +1,471 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="shortcut icon" href="./favicon/favicon-libro.jpg" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
-    <title>BookNest</title>
+
+    <title>BookNest | Tu rincón literario</title>
 </head>
 
 <body>
-    <header>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
         <div class="cabecera">
 
-            <!--<img src="./imgs/libro-logotipo.png" alt="Logotipo libro para la cabecera">-->
-            <h1>BookNest</h1>
+            <a href="#" class="logo">
+                <span class="logo-icon">📖</span>
+                <h1>BookNest</h1>
+            </a>
 
-            <div class="menu">
-                <h3>Inicio</h3>
-                <h3>Libros</h3>
-                <h3>Categorías</h3>
-                <h3>Sobre nosotros</h3>
-                <h3>Contacto</h3>
+            <nav class="menu">
+                <a href="#inicio" class="active">Inicio</a>
+                <a href="#libros">Libros</a>
+                <a href="#categorias">Categorías</a>
+                <a href="#nosotros">Sobre nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <div class="acciones">
+
+                <button class="icon-button" aria-label="Buscar">
+                    🔍
+                </button>
+
+                <button class="icon-button" aria-label="Favoritos">
+                    ♡
+                </button>
+
+                <button class="icon-button carrito" aria-label="Carrito">
+                    🛒
+                    <span>0</span>
+                </button>
             </div>
         </div>
     </header>
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="hero-tag">✨ DESCUBRE TU PRÓXIMA HISTORIA</span>
+
+                <h2>
+                    Un buen libro puede
+                    <span>cambiarlo todo.</span>
+                </h2>
+
+                <p>
+                    Explora nuestra colección de historias, aventuras
+                    y mundos esperando a ser descubiertos.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#libros" class="btn btn-primary">
+                        Explorar libros →
+                    </a>
+
+                    <a href="#categorias" class="btn btn-secondary">
+                        Ver categorías
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+
+                <div class="floating-book book-one">
+                    📕
+                </div>
+
+                <div class="floating-book book-two">
+                    📗
+                </div>
+
+                <div class="floating-book book-three">
+                    📘
+                </div>
+
+                <div class="hero-circle"></div>
+
+            </div>
+        </section>
+
+        <!-- ================= BUSCADOR ================= -->
+
+        <section class="search-section">
+            <div class="search-box">
+
+                <span>🔎</span>
+
+                <input type="text" placeholder="Busca un libro, autor o género...">
+
+                <button>Buscar</button>
+
+            </div>
+        </section>
+
+        <!-- ================= LIBROS DESTACADOS ================= -->
+
+        <section class="books-section" id="libros">
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-tag">NUESTRA SELECCIÓN</span>
+
+                    <h2>Libros destacados</h2>
+                </div>
+
+                <a href="#" class="view-all">
+                    Ver todos →
+                </a>
+
+            </div>
+
+            <div class="books-grid">
+
+                <!-- Libro 1 -->
+
+                <article class="book-card">
+                    <div class="book-cover cover-one">
+
+                        <span class="book-badge">
+                            Más vendido
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="book-emoji">
+                            📕
+                        </div>
+                    </div>
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            Ficción
+                        </span>
+
+                        <h3>El nombre del viento</h3>
+
+                        <p class="author">
+                            Patrick Rothfuss
+                        </p>
+
+                        <div class="book-bottom">
+
+                            <strong>24,95 €</strong>
+
+                            <button class="add-cart">
+                                +
+                            </button>
+
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- Libro 2 -->
+
+                <article class="book-card">
+
+                    <div class="book-cover cover-two">
+
+                        <span class="book-badge new">
+                            Nuevo
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="book-emoji">
+                            📘
+                        </div>
+
+                    </div>
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            Fantasía
+                        </span>
+
+                        <h3>El Hobbit</h3>
+
+                        <p class="author">
+                            J. R. R. Tolkien
+                        </p>
+
+                        <div class="book-bottom">
+
+                            <strong>19,90 €</strong>
+
+                            <button class="add-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Libro 3 -->
+
+                <article class="book-card">
+
+                    <div class="book-cover cover-three">
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="book-emoji">
+                            📗
+                        </div>
+
+                    </div>
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            Clásicos
+                        </span>
+
+                        <h3>1984</h3>
+
+                        <p class="author">
+                            George Orwell
+                        </p>
+
+                        <div class="book-bottom">
+
+                            <strong>14,50 €</strong>
+
+                            <button class="add-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Libro 4 -->
+
+                <article class="book-card">
+
+                    <div class="book-cover cover-four">
+
+                        <span class="book-badge">
+                            Favorito
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="book-emoji">
+                            📙
+                        </div>
+
+                    </div>
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            Misterio
+                        </span>
+
+                        <h3>El silencio de la ciudad blanca</h3>
+
+                        <p class="author">
+                            Eva García Sáenz de Urturi
+                        </p>
+
+                        <div class="book-bottom">
+
+                            <strong>18,95 €</strong>
+
+                            <button class="add-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORÍAS ================= -->
+
+        <section class="categories-section" id="categorias">
+
+            <div class="section-heading centered">
+
+                <span class="section-tag">EXPLORA</span>
+
+                <h2>Encuentra tu género</h2>
+
+                <p>
+                    Desde mundos fantásticos hasta historias que podrían
+                    cambiar tu forma de ver el mundo.
+                </p>
+
+            </div>
+
+
+            <div class="categories-grid">
+
+                <a href="#" class="category-card">
+                    <span>🧙</span>
+                    <h3>Fantasía</h3>
+                    <p>128 libros</p>
+                </a>
+
+                <a href="#" class="category-card">
+                    <span>🔍</span>
+                    <h3>Misterio</h3>
+                    <p>86 libros</p>
+                </a>
+
+                <a href="#" class="category-card">
+                    <span>🚀</span>
+                    <h3>Ciencia ficción</h3>
+                    <p>74 libros</p>
+                </a>
+
+                <a href="#" class="category-card">
+                    <span>❤️</span>
+                    <h3>Romance</h3>
+                    <p>112 libros</p>
+                </a>
+
+                <a href="#" class="category-card">
+                    <span>🏛️</span>
+                    <h3>Clásicos</h3>
+                    <p>95 libros</p>
+                </a>
+
+                <a href="#" class="category-card">
+                    <span>🧠</span>
+                    <h3>Psicología</h3>
+                    <p>63 libros</p>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BANNER ================= -->
+
+        <section class="newsletter" id="nosotros">
+
+            <div>
+
+                <span class="section-tag">
+                    ÚNETE A BOOKNEST
+                </span>
+
+                <h2>
+                    Siempre hay una historia
+                    esperando por ti.
+                </h2>
+
+                <p>
+                    Descubre nuevas lecturas y mantente al día
+                    con nuestras novedades.
+                </p>
+
+            </div>
+
+            <a href="#libros" class="btn btn-light">
+                Descubrir libros →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contacto">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    <span class="logo-icon">📖</span>
+                    <h2>BookNest</h2>
+                </a>
+
+                <p>
+                    Tu pequeño rincón para descubrir
+                    grandes historias.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Explorar</h3>
+
+                <a href="#libros">Libros</a>
+                <a href="#categorias">Categorías</a>
+                <a href="#">Novedades</a>
+                <a href="#">Más vendidos</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>BookNest</h3>
+
+                <a href="#nosotros">Sobre nosotros</a>
+                <a href="#">Favoritos</a>
+                <a href="#">Carrito</a>
+                <a href="#contacto">Contacto</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 BookNest. Hecho con ❤️ y muchas historias.</p>
+        </div>
+
+    </footer>
+
 </body>
 
 </html>
+```
